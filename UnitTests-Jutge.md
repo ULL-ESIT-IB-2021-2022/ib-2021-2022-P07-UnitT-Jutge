@@ -113,6 +113,12 @@ esos tests públicos (ofrece los resultados esperados) antes de enviar el progra
 contiene información algo más detallada sobre el uso de la plataforma Jutge. 
 Estúdielas antes de comenzar a trabajar con la misma.
 
+A la hora de escribir un programa para enviarlo a Jutge ha de tener en cuenta que el programa no ha 
+de escribir otra información como salida que la requerida por los tests de Jutge.
+De este modo, el mensaje inicial que se utiliza para que el programa escriba en pantalla tanto la utilidad
+del mismo como su modo de uso ha de omitirse.
+La recomendación que hacemos es que ese mensaje se escriba en una función que será (o no) invocada desde `main()`.
+
 Una vez que tenga su cuenta en Jutge, realice cuantos ejercicios sea capaz de programar y súbalos para su evaluación
 por el juez, hasta obtener un veredicto de AC (Accepted).
 Cuantos más problemas resuelva, más incrementará sus capacidades como programadora.
