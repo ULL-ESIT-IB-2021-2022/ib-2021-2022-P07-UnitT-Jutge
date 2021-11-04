@@ -221,15 +221,15 @@ A modo de ejemplo e introducción se recomienda el estudio de
 ### La plataforma Jutge
 [Jutge](https://jutge.org/) es una plataforma que ha sido desarrollada en la
 [UPC](https://www.upc.edu/en) para uso docente en asignaturas de programación.
-La plataforma ofrece una gran cantidad de problemas de programación que los estudiantes han
+La plataforma ofrece una gran cantidad de problemas que los estudiantes han
 de resolver y el Jutge (juez en catalán) asigna un 
 [veredicto](https://jutge.org/documentation/verdicts) 
-a cada solución que un estudiante sube a la plataforma.
+a cada solución que se suba a la plataforma.
 
 Jutge solo evalúa los programas desde el punto de vista de la corrección del resultado que ofrecen, 
-no evalúa la calidad del código en cuanto a otros aspectos: diseño, estilo, formato.
+no evalúa la calidad del código en cuanto a otros aspectos: diseño, estilo, formato, etc.
 Para determinar si un programa es correcto o no, Jutge aplica varios tests al programa (tests unitarios)
-que tratan de acreditar la bondad de la solución. 
+que tratan de acreditar la bondad de la solución, que podría ser parcialmente correcta.
 Algunos de esos tests son públicos y la programadora debiera encargarse de asegurar que su programa pasa
 esos tests públicos (ofrece los resultados esperados) antes de enviar el programa al juez.
 
