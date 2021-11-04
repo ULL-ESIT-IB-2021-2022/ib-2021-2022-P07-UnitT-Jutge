@@ -118,6 +118,8 @@ Cuantos más problemas resuelva, más incrementará sus capacidades como program
 * Intente siempre conseguir un veredicto de "Aceptado".
 * Escriba todos los programas de modo que estén estructurados en funciones.
 Debiera haber como mínimo dos funciones (siendo `main()` una de ellas.
+* Recuerde que Jutge solo evalúa la corrección de su programa desde un punto de vista del funcionamiento.
+Su código ha de cumplir adicionalmente con los requisitos de formato y estilo.
 
 1. [P48107](https://jutge.org/problems/P48107) Integer division and remainder of two natural numbers
 2. [P29973](https://jutge.org/problems/P29973) Triangle
