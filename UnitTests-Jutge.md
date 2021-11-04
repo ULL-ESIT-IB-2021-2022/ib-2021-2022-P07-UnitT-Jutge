@@ -13,7 +13,7 @@ Los objetivos de esta práctica son que el alumnado:
 ### Rúbrica de evaluacion de esta práctica
 En esta práctica y las siguientes ya no será admisible la presentación de un programa que, al margen de su funcionamiento,
 pudiera tener deficiencias en cuanto a reglas de estilo y formato. 
-Ante tal situación *la práctica se calificará como suspendida*.
+Ante tal situación **la práctica se calificará como suspendida**.
 Todo el código que se presente a evaluación ha de cumplir los estándares definidos en la 
 [Guía de Estilo de Google para C++](https://google.github.io/styleguide/cppguide.html).
 
