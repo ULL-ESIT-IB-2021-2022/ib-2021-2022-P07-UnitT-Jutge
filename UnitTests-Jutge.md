@@ -109,8 +109,8 @@ que tratan de acreditar la bondad de la solución, que podría ser parcialmente 
 Algunos de esos tests son públicos y la programadora debiera encargarse de asegurar que su programa pasa
 esos tests públicos (ofrece los resultados esperados) antes de enviar el programa al juez.
 
-[Estas transparencias](https://docs.google.com/presentation/d/14UvZPw4OJvogp6afLeouOAODcBNo5JhgePBQfkiAkic/edit?usp=sharing)
-contienen información algo más detallada sobre el uso de la plataforma Jutge. 
+[Este documento](https://docs.google.com/presentation/d/14UvZPw4OJvogp6afLeouOAODcBNo5JhgePBQfkiAkic/edit?usp=sharing)
+contiene información algo más detallada sobre el uso de la plataforma Jutge. 
 Estúdielas antes de comenzar a trabajar con la misma.
 
 Una vez que tenga su cuenta en Jutge, realice cuantos ejercicios sea capaz de programar y súbalos para su evaluación
