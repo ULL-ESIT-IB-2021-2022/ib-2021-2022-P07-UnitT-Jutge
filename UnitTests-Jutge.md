@@ -120,7 +120,9 @@ del mismo como su modo de uso ha de omitirse.
 La recomendación que hacemos es que ese mensaje se escriba en una función que será (o no) invocada desde `main()`.
 
 Una vez que tenga su cuenta en Jutge, realice cuantos ejercicios sea capaz de programar y súbalos para su evaluación
-por el juez, hasta obtener un veredicto de AC (Accepted).
+por el juez, hasta obtener un veredicto de 
+[AC](https://jutge.org/documentation/verdicts/AC)
+(Accepted).
 Cuantos más problemas resuelva, más incrementará sus capacidades como programadora.
 
 ### Ejercicios
