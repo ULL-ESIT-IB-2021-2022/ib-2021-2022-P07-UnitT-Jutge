@@ -134,4 +134,6 @@ Su código ha de cumplir adicionalmente con los requisitos de formato y estilo.
 
 ### Referencias
 * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
-* [Jutge](https://jutge.org/)
+* [Jutge](https://docs.google.com/presentation/d/14UvZPw4OJvogp6afLeouOAODcBNo5JhgePBQfkiAkic/edit?usp=sharing)
+* [Jutge documentation](https://jutge.org/documentation)
+* [Jutge web site](https://jutge.org/)
