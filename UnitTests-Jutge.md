@@ -4,40 +4,26 @@
 
 ### Objetivos
 Los objetivos de esta práctica son que el alumnado:
-* Desarrolle programas sencillos en C++ que utilicen clases, así como todas las características del lenguaje
-  estudiadas
-* Aloje todo el código fuente de sus programas en repositorios privados de GitHub
-* Sepa depurar sus programas usando la interfaz de depuración del VSC
-* Incluya en sus programas comentarios en el formato requerido por Doxygen
-* Conozca la herramienta CMake y sepa usarla para construir sus programas ejecutables
-* Conozca el framework de testing de Google (Google Tests) y sea capaz de desarrollar tests unitarios
-  sencillos
-* Conozca la plataforma Exercism y sea capaz de interaccionar con la misma para resolver algunos problemas
-  sencillos
+* Desarrolle con mayor fluidez programas sencillos en C++.
+* Profundice en el uso de funciones en sus programas.
+* Conozca los fundamentos del desarrollo de tests unitarios.
+* Comience a utilizar la plataforma Jutge para autoevaluar la corrección de sus programas.
 
 ### Rúbrica de evaluacion de esta práctica
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
-que se tendrán en cuenta a la hora de evaluar esta práctica:
-* El alumnado ha de acreditar conocer los conceptos expuestos en el material de referencia de esta práctica.
-* El alumnado ha de acreditar que ha realizado todos los ejercicios propuestos, así como ser capaz de desarrollar otros similares.
-* Ha de acreditar que es capaz de escribir un fichero CMakeLists.txt para automatizar el proceso de compilación de sus programas.
-* El código que escriba ha de estar escrito de acuerdo a los estándares definidos en la 
+que se tendrán en cuenta a la hora de evaluar esta práctica.
+El alumnado ha de acreditar que:
+
+* Conoce los conceptos expuestos en el material de referencia de esta práctica.
+* Ha realizado todos los ejercicios propuestos, así como que es capaz de desarrollar otros de complejidad similar.
+* Sus programas se compilan correctamente utilizando la utilidad `make` y un fichero `Makefile`.
+* Todo el código que haya escrito cumple los estándares definidos en la 
   [Guía de Estilo de Google para C++](https://google.github.io/styleguide/cppguide.html).
 * Todos los identificadores que utilice en su programa (constantes, variables, etc.) deberán ser
   siempre significativos. No utilice nunca identificadores de una única letra, tal vez con la excepción de las
   variables que utilice para iterar en un bucle.
-* Antes de su ejecución, todos los programas que desarrolle, deben imprimir en pantalla un
-  mensaje indicando la finalidad del programa así como la información que precisará del usuario para su correcta ejecución.
-* Ante la presencia de cualquier bug, el alumnado ha de conocer las técnicas básicas de depuración usando
-  Visual Studio Code.
-* Todos los ficheros de código del proyecto correspondiente a esta práctica han de alojarse en un repositorio de 
-  [GitHub](https://github.com/).
-* Los programas deben contener comentarios adecuados en el formato requerido por 
-  [Doxygen](https://www.doxygen.nl/index.html).
-* Los programas deben estructurarse en directorios diferentes para cada "proyecto" y hacer que cada uno de
-  ellos contenga un fichero `CMakeLists.txt` con la configuración de despliegue del proyecto.
-* Las funciones y métodos que se desarrollen para resolver los ejercicios han de disponer de un conjunto
-  mínimo de tests unitarios que comprueben la corrección de cada una de ellas.
+* Dispone de una cuenta en la plataforma [Jutge](https://jutge.org/) y es capaz de auto-evaluar un programa en esa plataforma.
+
 
 ### La plataforma de testing de Google
 Tal como recoge la
