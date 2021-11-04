@@ -28,7 +28,40 @@ El alumnado ha de acreditar que:
 * Dispone de una cuenta en la plataforma [Jutge](https://jutge.org/) y es capaz de auto-evaluar un programa en esa plataforma.
 
 
-### Tests Unitarios
+### Pruebas Unitarias
+Las pruebas unitarias (unit tests en inglés), son pruebas donde se comprueba el correcto funcionamiento de
+componentes individuales de un programa.
+Se llaman "unidades de código" a aquellas partes de un programa cuyo funcionamiento se comprueba mediante tests 
+y habitualmente son clases, funciones o grupos ellas, e incluso todo un programa.
+
+Las pruebas consisten en suministrar al código un conjunto de entradas y determinar si 
+el conjunto de salida es el esperado. 
+Es decir, comprobar si los valores devueltos son correctos o no, y gestionar los fallos, en
+caso de que la salida no sea la esperada.
+El propósito de este tipo de pruebas, es el garantizar que cada componente funcione aisladamente
+y que todo funciona como se espera que funcione.
+
+Por lo general, la propia programadora que escribe el código es quien tiene que escribir 
+los test unitarios para probar su código, aunque lo deseable sería que el código y los tests los escriban
+equipos diferentes, puesto que quien escribe el código suele ser menos exigente a la hora de escribir
+los tests.
+Por otra parte conviene siempre escribir las pruebas **antes** de escribir el código que se va a probar.
+
+A la hora de escribir tests conviene centrar la atención en aquellas entradas del programa (función, clase, etc.)
+que son más proclives a producir errores.
+Por ejemplo, si se trata de un programa que calcula la suma de dos números enteros, sería conveniente probar diversos
+casos que cubran una variedad de posibilidades.
+Supongamos por ejemplo que se está desarrollando una función (unidad de código) que calcula la suma de dos números enteros.
+Una prueba (test unitario) que valide la corrección de esa función podría: 
+* Comprobar que lo que reciba la función sean realmente dos parámetros
+* Que esos dos parámetros sean números
+* Que lo que devuelva la función sea otro número
+* Que ese número corresponda realmente con la suma
+* Que la suma se calcule correctamente para cualquier combinación de números con valores negativos, positivos o con valor cero.
+Todas estas podrían ser posibles pruebas unitarias que se realicen sobre la función.
+Las pruebas unitarias  se suelen realizar utilizando entornos de pruebas (testing) especializados.
+
+
 
 
 
