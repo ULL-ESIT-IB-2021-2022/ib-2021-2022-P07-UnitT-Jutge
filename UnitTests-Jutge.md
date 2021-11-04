@@ -91,6 +91,7 @@ Todas estas podrían ser posibles pruebas unitarias que se realicen sobre la fun
 Las pruebas unitarias  se suelen desarrollar utilizando entornos de pruebas especializados que estudiaremos en el futuro
 pero por ahora el propósito en la asignatura es que antes de escribir un programa se escriban a mano un conjunto de pruebas
 que sirvan para, una vez finalizado el programa, acreditar la corrección del mismo al menos para un cierto número de situaciones.
+
 La regla a seguir de ahora en adelante es **Convierta en un hábito la escritura de tests para sus programas**.
 
 ### La plataforma Jutge
