@@ -6,7 +6,7 @@
 Los objetivos de esta práctica son que el alumnado:
 * Desarrolle con mayor fluidez programas sencillos en C++.
 * Profundice en el uso de funciones en sus programas.
-* Conozca los fundamentos del desarrollo de tests unitarios.
+* Conozca los conceptos básicos del desarrollo de pruebas unitarias de código y escriba a mano pruebas unitarias para sus programas.
 * Comience a utilizar la plataforma Jutge para autoevaluar la corrección de sus programas.
 
 ### Rúbrica de evaluacion de esta práctica
@@ -27,19 +27,15 @@ El alumnado ha de acreditar que:
   variables que utilice para iterar en un bucle.
 * Dispone de una cuenta en la plataforma [Jutge](https://jutge.org/) y es capaz de auto-evaluar un programa en esa plataforma.
 
-
 ### Pruebas Unitarias
-Las pruebas unitarias (unit tests en inglés), son pruebas donde se comprueba el correcto funcionamiento de
+Las pruebas unitarias (unit tests en inglés), son pruebas que se utilizan para comprobar el correcto funcionamiento de
 componentes individuales de un programa.
 Se llaman "unidades de código" a aquellas partes de un programa cuyo funcionamiento se comprueba mediante tests 
 y habitualmente son clases, funciones o grupos ellas, e incluso todo un programa.
 
-Las pruebas consisten en suministrar al código un conjunto de entradas y determinar si 
-el conjunto de salida es el esperado. 
-Es decir, comprobar si los valores devueltos son correctos o no, y gestionar los fallos, en
-caso de que la salida no sea la esperada.
-El propósito de este tipo de pruebas, es el garantizar que cada componente funcione aisladamente
-y que todo funciona como se espera que funcione.
+Las pruebas consisten en suministrar al código un conjunto de entradas y determinar si  el conjunto de salida es el esperado. 
+Es decir, comprobar si los valores devueltos son correctos o no, y gestionar los fallos, en caso de que la salida no sea la esperada.
+El propósito de este tipo de pruebas, es el garantizar que cada componente funcione aisladamente y que todo funciona como se espera que funcione.
 
 Por lo general, la propia programadora que escribe el código es quien tiene que escribir 
 los test unitarios para probar su código, aunque lo deseable sería que el código y los tests los escriban
@@ -47,65 +43,20 @@ equipos diferentes, puesto que quien escribe el código suele ser menos exigente
 los tests.
 Por otra parte conviene siempre escribir las pruebas **antes** de escribir el código que se va a probar.
 
-A la hora de escribir tests conviene centrar la atención en aquellas entradas del programa (función, clase, etc.)
+A la hora de escribir tests conviene centrar la atención en aquellas entradas del programa (o unidad de código)
 que son más proclives a producir errores.
-Por ejemplo, si se trata de un programa que calcula la suma de dos números enteros, sería conveniente probar diversos
-casos que cubran una variedad de posibilidades.
 Supongamos por ejemplo que se está desarrollando una función (unidad de código) que calcula la suma de dos números enteros.
-Una prueba (test unitario) que valide la corrección de esa función podría: 
+Tests unitarios que validen la corrección de esa función podrían: 
 * Comprobar que lo que reciba la función sean realmente dos parámetros
 * Que esos dos parámetros sean números
 * Que lo que devuelva la función sea otro número
 * Que ese número corresponda realmente con la suma
 * Que la suma se calcule correctamente para cualquier combinación de números con valores negativos, positivos o con valor cero.
 Todas estas podrían ser posibles pruebas unitarias que se realicen sobre la función.
-Las pruebas unitarias  se suelen realizar utilizando entornos de pruebas (testing) especializados.
-
-
-
-
-
-Tal como recoge la
-[Wikipedia](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas),
-El desarrollo dirigido por tests (TDD, *Test Driven Development* por sus siglas en inglés) es una práctica de 
-ingeniería de software que involucra otras dos técnicas: 
-escribir las pruebas primero (Test First Development) y 
-[Refactorización](https://es.wikipedia.org/wiki/Refactorizaci%C3%B3n)
-(Refactoring) o reestructuración del código.
-Para escribir las pruebas generalmente se utilizan las pruebas unitarias (unit test en inglés). 
-
-El TDD se basa en la repetición de un ciclo de desarrollo muy corto que
-involucra la repetición de tres pasos:
-1. En primer lugar el desarrollador escribe un caso de prueba (test) que falla (a propósito) y que define una mejora deseada (habitualmente una nueva función o método)
-2. A continuación se desarrolla el código (de la función) que hace que la prueba pase satisfactoriamente 
-3. Finalmente refactoriza el nuevo código hasta obtener un resultado satisfactorio
-
-Esta imagen representa este ciclo repetitivo característico del TDD.
-
-![TDD cycle](https://raw.githubusercontent.com/ULL-ESIT-IB-2020-2021/IB-P12-Classes-GTests-Exercism/master/red-green-refactor.png "Red-Green-Refactor")
-
-El propósito del desarrollo guiado por pruebas es lograr un código limpio que funcione correctamente.
-La idea es que los requisitos sean traducidos a pruebas (tests), y de este modo, cuando las pruebas pasen 
-se garantizará que el software cumple con los requisitos que se han establecido.
-
-
-Las "unidades" de código para las que se realizan tests habitualmente son clases, funciones o grupos ellas. 
-Supongamos por ejemplo que se está implementando una función (unidad de código) que calcula la suma de dos números enteros.
-Una prueba (test unitario) es un código que valida la corrección de esa función: se podría comprobar que lo
-que reciba la función sean realmente dos parámetros, y que esos dos parámetros sean números, y que lo que
-devuelva la función sea otro número, y que ese número corresponda realmente con la suma. 
-Todas estas podrían ser posibles pruebas unitarias que se realicen sobre la función.
-Las pruebas unitarias  se suelen realizar utilizando entornos de pruebas (testing) especializados.
-
+Las pruebas unitarias  se suelen realizar utilizando entornos de pruebas especializados que estudiaremos en el futuro
+pero por ahora el propósito en la asignatura es que antes de escribir un programa se escriban a mano un conjunto de pruebas
+que sirvan para, una vez finalizado el programa, acreditar la corrección del mismo al menos para un cierto número de situaciones.
 La regla a seguir de ahora en adelante es **Convierta en un hábito la escritura de tests para sus programas**.
-Desarrolle siempre sus funciones iterando el famoso ciclo TDD que ya se ha expuesto en este documento:
-* Escriba un test que falle y que define una mejora deseada o una nueva función
-* Escirba el código (función, método) que haga que la prueba pase satisfactoriamente 
-* Finalmente refactoriza el nuevo código hasta obtener un resultado satisfactorio
-
-Es fácil encontrar en la web mucha documentación sobre TDD. 
-A modo de ejemplo e introducción se recomienda el estudio de
-[Mejorar la calidad del código mediante la prueba unitaria](https://www.mql5.com/es/articles/1579).
 
 ### La plataforma Jutge
 [Jutge](https://jutge.org/) es una plataforma que ha sido desarrollada en la
