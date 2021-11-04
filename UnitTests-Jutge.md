@@ -120,7 +120,8 @@ Cuantos más problemas resuelva, más incrementará sus capacidades como program
 Debiera haber como mínimo dos funciones (siendo `main()` una de ellas.
 
 1. [P48107](https://jutge.org/problems/P48107) Integer division and remainder of two natural numbers
-2. [P90615](https://jutge.org/problems/P90615) Maximum of three integer numbers
+2. [P29973](https://jutge.org/problems/P29973) Triangle
+3. [P90615](https://jutge.org/problems/P90615) Maximum of three integer numbers
 4. [P70955](https://jutge.org/problems/P70955) How many seconds are they?
 5. [P34279](https://jutge.org/problems/P34279) Add one Second.
 6. [P51352](https://jutge.org/problems/P51352) Elementos.
