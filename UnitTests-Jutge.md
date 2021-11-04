@@ -218,273 +218,31 @@ Es fácil encontrar en la web mucha documentación sobre TDD.
 A modo de ejemplo e introducción se recomienda el estudio de
 [Mejorar la calidad del código mediante la prueba unitaria](https://www.mql5.com/es/articles/1579).
 
-### Exercism
-[Exercism](https://exercism.io/) es una plataforma orientada a aprender a programar o también a mejorar las
-capacidades de cualquier programadora.
-El objetivo de Exercism es servir como medio para aprender a programar en un determinado lenguaje, y para ello se propone
-hacerlo mediante la resolución de ejercicios que otros usuarios han planteado. 
-Lo que se persigue es que tanto quien resuelve el problema como quien lo planteó aprendan al mismo tiempo. 
-Además, la interacción con el resto de la comunidad podrá llevar a debates para determinar cuál sería la mejor solución para un determinado problema.
+### La plataforma Jutge
+[Jutge](https://jutge.org/) es una plataforma que ha sido desarrollada en la
+[UPC](https://www.upc.edu/en) para uso docente en asignaturas de programación.
+La plataforma ofrece una gran cantidad de problemas de programación que los estudiantes han
+de resolver y el Jutge (juez en catalán) asigna un 
+[veredicto](https://jutge.org/documentation/verdicts) 
+a cada solución que un estudiante sube a la plataforma.
 
-La plataforma se basa en una una aplicación de línea de comandos disponible para diferentes sistemas
-operativos (Linux, Mac, Windows).
-Usando esa aplicación, un usuario puede descargar una serie de ejercicios de programación disponibles en la
-plataforma y realizar los correspondientes programas hasta que consiga pasar los diferentes tests que se
-suministran con cada ejercicio.
+Jutge solo evalúa los programas desde el punto de vista de la corrección del resultado que ofrecen, 
+no evalúa la calidad del código en cuanto a otros aspectos: diseño, estilo, formato.
+Para determinar si un programa es correcto o no, Jutge aplica varios tests al programa (tests unitarios)
+que tratan de acreditar la bondad de la solución. 
+Algunos de esos tests son públicos y la programadora debiera encargarse de asegurar que su programa pasa
+esos tests públicos (ofrece los resultados esperados) antes de enviar el programa al juez.
 
-La plataforma puede ser usada en "modo práctica", en cuyo caso no existe la opción de mentorización (solicitar
-que una experta le ayude con sus ejercicios), pero aún
-así merece la pena practicar los múltiples ejercicios que hallará en la plataforma.
+[Estas transparencias](https://docs.google.com/presentation/d/14UvZPw4OJvogp6afLeouOAODcBNo5JhgePBQfkiAkic/edit?usp=sharing)
+contienen información algo más detallada sobre el uso de la plataforma Jutge. 
+Estúdielas antes de comenzar a trabajar con la misma.
 
-## Primeros pasos en Exercism
-Comience por [registrarse en Exercism](https://exercism.io/users/sign_up). 
-Si lo desea, puede Ud. hacerlo usando la cuenta de GitHub de la que ya dispone.
-Una vez disponga de una cuenta, configure lo básico de la misma y elija un "track" (un lenguaje) en el que
-desee practicar.
-Obviamente se propone que elija el track correspondiente a C++.
-
-Propóngase a continuación resolver el problema "Hello World".
-En la página de ese problema (o de cualquier otro) hallará Ud. un enlace que indica *Get started* y 
-[Begin walk-through](https://exercism.io/cli-walkthrough).
-Si sigue ese enlace le llevará a la página *Welcome to the Exercism installation guide!* con instrucciones
-sobre cómo instalar `exercism`.
-En este documento se propone instalarla en la máquina virtual Linux de la asignatura.
-Eligiendo la opción *Linux* y a continuación la opción *Using snap* se le pedirá que ejecute
-```
-$ sudo snap install exercism
-```
-Ese comando instalará en primer lugar `snap` y a continuación `exercism`, que es lo que se persigue.
-También en esa página se indica que se compruebe que la instalación es correcta con el comando
-```
-$ exercism version
-```
-[`snap`](https://blogubuntu.com/que-es-ubuntu-snap) es un mecanismo alternativo al ya conocido
-`apt-get install` para instalar aplicaciones en Ubuntu Linux.
-Si quiere Ud. saber más sobre `snap` puede consultar
-[esta referencia](https://snapcraft.io/docs/getting-started),
-aunque ello no es necesario para el trabajo que se propone realizar con Exercism.
-
-Una vez instalada la aplicación `exercism` el siguiente paso es configurar la interfaz de comandos (CLI) de la
-aplicación.
-Para ello se pide que se ejecute el comando
-```
-$ exercism configure --token=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-```
-donde el *token* que figura en el comando anterior se encuentra (es específico de cada usuario) en la [página
-de configuración](https://exercism.io/my/settings) de la cuenta de usuario que se ha creado.
-Basta copiar de esa página el token y colocarlo en el comando anterior.
-
-El comando anterior, una vez ejecutado indica:
-```
-You have configured the Exercism command-line client:
-
-Config dir:                       /home/usuario/snap/exercism/5/.config/exercism
-Token:         (-t, --token)      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-Workspace:     (-w, --workspace)  /home/usuario/snap/exercism/5/exercism
-API Base URL:  (-a, --api)        https://api.exercism.io/v1
-```
-A continuación se puede elegir un problema para pasar a resolverlo.
-Se propone, como ya se ha dicho, elegir el problema "Hello World".
-En la página de ese problema figura una descripción precisa del problema planteado y en la parte derecha de
-esa página figuran las instrucciones para:
-* Download. Descargar el problema mediante el comando `exercism download --exercise=hello-world --track=cpp`
-* Solve. Para resolver el problema se propone usar el editor favorito del usuario. Se recomienda usar Visual
-  Studio Code
-* Submit. El comando para subir a la plataforma la solución que el usuario proponga.
-
-Si se ejecuta el comando para descargar el problema el sistema responde:
-```
-$ exercism download --exercise=hello-world --track=cpp
-
-Downloaded to
-/home/usuario/snap/exercism/5/exercism/cpp/hello-world
-```
-indicando el directorio donde ha colocado el código necesario para trabajar en ese problema.
-
-Si revisa Ud. los ficheros descargados observará que Exercism utiliza `.cpp` como extensión para los ficheros
-con código fuente C++ en lugar de la extensión `.cc` que recomienda la Guía de Estilo de Google.
-La extensión `.cpp` es muy común para ficheros de código C++.
-
-## Ejecución de los tests para un determinado problema
-El siguiente paso consiste en editar el programa (en el caso del problema "Hello World" el fichero a editar es
-`hello_world.cpp`).
-Edite ese fichero hasta que considere que tiene una versión operativa.
-Una vez finalizado su programa, el siguiente paso consiste en pasar (superar) los tests del código.
-Cada ejercicio de Exercism va acompañado de una serie de tests que el programa debe superar para ser
-considerado válido.
-
-Tal como se explica en la página [Running the Tests](https://exercism.io/tracks/cpp/tests), cada problema va
-acompañado de sus tests unitarios y un fichero `CMakeLists.txt` que se
-utiliza para automatizar la compilación de los tests y del propio programa.
-Tenga en cuenta que **no** debiera editar ni modificar el fichero `CMakeLists.txt`.
-
-Tal como se indica en la página anterior y suponiendo que su ejercicio se llame `bob`, 
-debieran existir los ficheros `bob.cpp` y `bob.h` antes de
-ejecutar los tests. 
-Esos ficheros podrían estar vacíos, pero han de existir.
-En el caso del ejercicio `hello-world` los ficheros son `hello-world.cpp` y `hello-world.h`
-
-El siguiente paso es compilar el programa y los tests unitarios.
-Para ello, colóquese en el directorio del ejercicio (`/home/usuario/snap/exercism/5/exercism/cpp/hello-world`)
-y ejecute:
-```
-$ touch hello-world.{h,cpp}
-$ mkdir build
-$ cd build
-$ cmake -G "Unix Makefiles" ..
-$ make
-```
-El comando [touch](https://ss64.com/bash/touch.html) modifica la fecha del fichero (ficheros) que se le pasen
-como argumentos. 
-El directorio `build` que se crea servirá para alojar (entre otros ficheros) un programa ejecutable que pasará
-los tests a su código.
-Exercism utiliza `cmake` (tendrá Ud. que instalar esa aplicación en su VM si no la tiene instalada).
-
-Al ejecutar `cmake -G "Unix Makefiles" ..` CMake creará un fichero Makefile que le servirá para compilar su
-ejercicio.
-Al ejecutar `make` en el directorio `build` se compilan los tests que ha de pasar su programa.
-Si se producen errores de compilación, tendrá Ud. que solucionarlos en el directorio (padre de `build`) de su
-ejercicio.
-Una vez que se corrijan los errores, `make` construirá y ejecutará los tests que haya disponibles para el
-ejercicio en cuestión.
-
-Normalmente cada problema viene acompañado de un conjunto de tests cuyo código se encuentra en un fichero cuyo
-nombre tiene el sufijo `_test` (fichero `hello_world_test.cpp` en el caso del ejercicio "Hello
-World").
-La estrategia que ha de seguir a la hora de progresar en la mejora de su ejercicio es hacer que su código pase
-progresivamente las diferentes pruebas (tests) que figuran en ese fichero.
-Para ello basta que "mueva" en el código la línea
-```
-#if defined(EXERCISM_RUN_ALL_TESTS)
-```
-para situarla después del siguiente test que quiera probar.
-Tenga en cuenta que la plataforma de testing que utiliza Exercism es 
-[Catch2](https://github.com/catchorg/Catch2)
-y no Google Tests, pero los tests en formato Catch2 son fáciles de entender si se conoce
-cualquier otra plataforma de testing.
-
-Cuando su solución al problema pase todos los tests y esté Ud. satisfecha con la misma, puede remitirla a la
-plataforma.
-Utilice para ello el comando `exercism submit` que hallará Ud. en la página correspondiente al problema.
-Una vez que haya enviado su solución a Exercism recibirá un mensaje similar a este:
-```
-Your solution has been submitted successfully.
-You can complete the exercise and unlock the next core exercise at:
-
-https://exercism.io/my/solutions/xxxx
-```
-A partir de este punto puede ya ver las soluciones que otras usuarias hayan dado al mismo problema o bien
-avanzar con otros problemas de ese mismo "track".
-
-### Trabajo previo
-Antes de realizar los ejercicios de esta práctica, estudie detenidamente el Capítulo 8 (epígrafes 8.1-8.16) del
-[tutorial learncpp](https://www.learncpp.com/cpp-tutorial/81-welcome-to-object-oriented-programming/).
-Muchos de los ejemplos de ese tutorial son los mismos que se utilizan en las clases teóricas de la asignatura,
-cuyo material debiera Ud. también estudiar.
-
-### Entorno de trabajo
-Al realizar los siguientes ejercicios cree dentro de su repositorio de esta práctica un directorio diferente
-para cada uno de los ejercicios (proyectos) con un contenido similar al que se ha entregado para la aplicación
-de ejemplo `fibonacci_sum`.
-Tómese como ejemplo el primero de los ejercicios.
-Ponga a cada uno de esos directorios nombres significativos (fechas, complejos, racionales por ejemplo).
-
-Haga que cada uno de sus programas conste de 3 ficheros:
-* Un fichero `fechas.cc` (programa principal) que contendrá la función `main` e incluirá el fichero de cabecera `fecha.h`.
-* El fichero `fecha.h` que contendrá las declaraciones correspondientes a la clase `Fecha`.
-* El fichero `fecha.cc` que contendrá el código (definiciones) correspondientes a la clase `Fecha`.
-* Obviamente si el programa principal (`fechas.cc`) utiliza otras clases, debería incluir (`#include`) los
-  correspondientes ficheros de cabecera.
-Modifique estos nombres de ficheros para adaptarlos al ejercicio en cuestión.
-
-La compilación del programa correspondiente a cada ejercicio se automatizará con un fichero `CMakeLists.txt`
-que se utilizará con `cmake`.
-
-Así pues, la estructura de directorios y sus contenidos correspondiente al primero de los ejercicios
-propuestos sería la siguiente:
-```
-fechas
-    ├── build           // Directorio inicialmente vacío para alojar el programa ejecutable
-    ├── CMakeLists.txt  // Fichero de configuración para cmake
-    └── src             // Directorio contenedor del código fuente del ejercicio
-        ├── fecha.cc
-        ├── fecha.h
-        └── fechas.cc
-```
-
-Desarrolle cada uno de estos ejercicios de forma incremental, probando cada una de las funciones que va Ud.
-desarrollando. Utilice el depurador de VSC para corregir cualquier tipo de error semántico que se produzca en
-cualquiera de sus desarrollos.
+Una vez que tenga su cuenta en Jutge, realice cuantos ejercicios sea capaz de programar y súbalos para su evaluación
+por el juez, hasta obtener un veredicto de AC (Accepted).
+Cuantos más problemas resuelva, más incrementará sus capacidades como programadora.
 
 ### Ejercicios
-1. La clase `Fecha`.
-
-Desarrolle una clase `Fecha` que permita representar y gestionar fechas.
-Incorpore en la clase los miembros de datos y métodos que considere adecuados para la finalidad que se
-persigue en este ejercicio.
-Incluya un método que permita determinar si el año correspondiente a una fecha es un año bisiesto o
-no.
-Realice un programa cliente `fechas.cc` que tome como parámetros dos nombres de ficheros correspondientes a
-sendos ficheros de texto:
-
-```
-./fechas - Gestión de fechas
-Modo de uso: ./fechas fichero_entrada.txt fichero_salida.txt
-Pruebe ./fechas --help para más información
-```
-El fichero de entrada contendrá múltiples líneas en cada una de las cuales habrá una fecha escrita en el formato:
-```
-dd/mm/aa
-```
-El programa deberá imprimir en el fichero de salida (segundo parámetro) todas las fechas que se encuentran en
-el fichero de entrada pero escritas en orden ascendente cronológicamente.
-Un modo de proceder es leer todas las fechas del fichero de entrada y almacenarlas en un vector, que será
-posteriormente ordenado para luego volcar su contenido en el fichero de salida.
-Para proceder de este modo ha de sobrecargar el operador que permite determinar el "orden" (cronológico) de
-dos fechas.
-
-Desarrolle un conjunto de tests (gtest) que incluya al menos dos tests para cada una de las funciones que incluya en
-su programa.
-
-2. La clase `Complejo`.
-
-Todo
-[número complejo](https://es.wikipedia.org/wiki/N%C3%BAmero_complejo)
-puede representarse como la suma de un número real y un número imaginario, de la forma `a + bi` donde el
-término `a` es la parte real, `b` la parte imaginaria e `i` la
-[unidad imaginaria](https://es.wikipedia.org/wiki/Unidad_imaginaria).
-
-En este ejercicio se propone desarrollar una clase `Complejo` que permita operar con números complejos.
-
-Separe el diseño de su clase `Complejo` en dos ficheros, `complejo.h` y `complejo.cc` conteniendo
-respectivamente la declaración y la definición de la clase.
-Siga las indicaciones del tutorial 
-[Class code and header files](https://www.learncpp.com/cpp-tutorial/89-class-code-and-header-files/)
-para realizar esta separación de su clase en dos ficheros.
-Siga igualmente las indicaciones del tutorial 
-[Header guards](https://www.learncpp.com/cpp-tutorial/header-guards/)
-para incluir (siempre de ahora en adelante) *header guards* (guardas de cabecera) en sus ficheros de
-definiciones (`*.h`) de modo que se evite la inclusión múltiple del mismo fichero.
-
-Desarrolle un programa cliente `complejos.cc` que permita operar con números complejos y haga uso de la clase `Complejo` que diseñe.
-La clase `Complejo` ha de contener al menos métodos que permitan (`Print()`) imprimir un número complejo así como sumar (`Add()`) y restar (`Sub()`) números complejos.
-Así la función `main` del programa `complejos.cc` podría contener sentencias como las siguientes:
-
-```
-main() {
-  Complejo complejo1{4, 5}, complejo2{7, -8};
-  Complejo resultado;
-  resultado = add(complejo1, complejo2);
-  resultado.print();
-  resultado = sub(complejo1, complejo2);
-  resultado.print();
-}
-```
-que imprimirían en pantalla los resultados de la suma y referencia de números complejos indicada.
-
-Incluya (discrecionalmente) cualesquiera otras operaciones que considere adecuadas como métodos en la clase `Complejo`.
-
-Desarrolle un conjunto de tests (gtest) que incluya al menos dos tests para cada una de las funciones que incluya en su programa.
+1. 
 
 ### Referencias
 * [Desarrollo dirigido por Tests](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
