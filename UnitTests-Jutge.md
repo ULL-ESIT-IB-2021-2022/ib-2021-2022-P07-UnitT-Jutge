@@ -10,15 +10,18 @@ Los objetivos de esta práctica son que el alumnado:
 * Comience a utilizar la plataforma Jutge para autoevaluar la corrección de sus programas.
 
 ### Rúbrica de evaluacion de esta práctica
-Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
-que se tendrán en cuenta a la hora de evaluar esta práctica.
+En esta práctica y las siguientes ya no será admisible la presentación de un programa que, al margen de su funcionamiento,
+pudiera tener deficiencias en cuanto a reglas de estilo y formato. 
+Ante tal situación la práctica se calificará como suspendida.
+Todo el código que se presente a evaluación ha de cumplir los estándares definidos en la 
+[Guía de Estilo de Google para C++](https://google.github.io/styleguide/cppguide.html).
+
+Se señalan a continuación otros aspectos (la lista no es exhaustiva) que se tendrán en cuenta a la hora de evaluar esta práctica.
 El alumnado ha de acreditar que:
 
 * Conoce los conceptos expuestos en el material de referencia de esta práctica.
 * Ha realizado todos los ejercicios propuestos, así como que es capaz de desarrollar otros de complejidad similar.
 * Sus programas se compilan correctamente utilizando la utilidad `make` y un fichero `Makefile`.
-* Todo el código que haya escrito cumple los estándares definidos en la 
-  [Guía de Estilo de Google para C++](https://google.github.io/styleguide/cppguide.html).
 * Todos los identificadores que utilice en su programa (constantes, variables, etc.) deberán ser
   siempre significativos. No utilice nunca identificadores de una única letra, tal vez con la excepción de las
   variables que utilice para iterar en un bucle.
