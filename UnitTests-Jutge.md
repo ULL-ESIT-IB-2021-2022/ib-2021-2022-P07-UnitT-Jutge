@@ -86,6 +86,7 @@ Tests unitarios que validen la corrección de esa función podrían:
 * Que lo que devuelva la función sea otro número
 * Que ese número corresponda realmente con la suma
 * Que la suma se calcule correctamente para cualquier combinación de números con valores negativos, positivos o con valor cero.
+
 Todas estas podrían ser posibles pruebas unitarias que se realicen sobre la función.
 Las pruebas unitarias  se suelen realizar utilizando entornos de pruebas especializados que estudiaremos en el futuro
 pero por ahora el propósito en la asignatura es que antes de escribir un programa se escriban a mano un conjunto de pruebas
