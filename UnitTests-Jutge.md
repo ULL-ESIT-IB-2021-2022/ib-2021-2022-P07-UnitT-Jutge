@@ -8,6 +8,7 @@ Los objetivos de esta práctica son que el alumnado:
 * Profundice en el uso de funciones en sus programas.
 * Conozca los conceptos básicos del desarrollo de pruebas unitarias de código y escriba a mano pruebas unitarias para sus programas.
 * Comience a utilizar la plataforma Jutge para autoevaluar la corrección de sus programas.
+* Incluya de ahora en adelante comentarios de cabecera en todos sus ficheros de código.
 
 ### Rúbrica de evaluacion de esta práctica
 En esta práctica y las siguientes ya no será admisible la presentación de un programa que, al margen de su funcionamiento,
@@ -26,6 +27,37 @@ El alumnado ha de acreditar que:
   siempre significativos. No utilice nunca identificadores de una única letra, tal vez con la excepción de las
   variables que utilice para iterar en un bucle.
 * Dispone de una cuenta en la plataforma [Jutge](https://jutge.org/) y es capaz de auto-evaluar un programa en esa plataforma.
+
+### Comentarios de cabecera
+Una buena práctica en el ámbito de la documentación del código consiste en incluir un bloque de comentarios al comienzo
+de todos los ficheros de un proyecto de desarrollo de software.
+El siguiente es un ejemplo de comentario de bloque que debería incluirse al comienzo de todos los ficheros
+(`*.cc`, `*.h`) de sus proyectos de programación en el ámbito de esta asignatura:
+
+```
+/**
+  * Universidad de La Laguna
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Informática Básica 2021-2022
+  *
+  * @file 
+  * @author Albert Einstein aeinstein@ull.es
+  * @date Feb 30 2022
+  * @brief 
+  * @bug No hay bugs conocidos
+  * @see 
+  */
+```
+
+Todo fichero debiera contener (etiqueta `@brief`) una breve descripción del contenido del fichero.
+Si fuera necesario se incluirá a continuación una descripción más detallada.
+Obviamente el comentario específico así como el nombre del fichero debieran particularizarse para cada caso
+concreto.
+
+Incluya siempre un bloque de comentarios similar al anterior en todos sus ficheros.
+Preste cuidado a la práctica habitual de "copiar y pegar" estos comentarios de un proyecto a otro, puesto que parte de la
+información cambiará.
 
 ### Pruebas Unitarias
 Las pruebas unitarias (unit tests en inglés), son pruebas que se utilizan para comprobar el correcto funcionamiento de
@@ -82,21 +114,21 @@ por el juez, hasta obtener un veredicto de AC (Accepted).
 Cuantos más problemas resuelva, más incrementará sus capacidades como programadora.
 
 ### Ejercicios
-1. 
+* Escriba programas que solucionen los siguientes problemas y evalúe su solución utilizando Jutge.
+* Intente siempre conseguir un veredicto de "Aceptado".
+* Escriba todos los programas de modo que estén estructurados en funciones.
+Debiera haber como mínimo dos funciones (siendo `main()` una de ellas.
+
+1. [P48107](https://jutge.org/problems/P48107) Integer division and remainder of two natural numbers
+2. [P90615](https://jutge.org/problems/P90615) Maximum of three integer numbers
+4. [P70955](https://jutge.org/problems/P70955) How many seconds are they?
+5. [P34279](https://jutge.org/problems/P34279) Add one Second.
+6. [P51352](https://jutge.org/problems/P51352) Elementos.
+7. [P51126](https://jutge.org/problems/P51126) Intervals (I)
+8. [P33839](https://jutge.org/problems/P33839) Sum of Digits 
+9. [P97969](https://jutge.org/problems/P97969) Counting a's (I)
+10. [P80660](https://jutge.org/problems/P80660) The sequence of Collatz
 
 ### Referencias
-* [Desarrollo dirigido por Tests](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
-* [Google Test](https://en.wikipedia.org/wiki/Google_Test)
-* [Cómo usar Google Test para C++ en VSC](https://docs.microsoft.com/es-es/visualstudio/test/how-to-use-google-test-for-cpp?view=vs-2019), 
-* [Google Tests build instructions](https://github.com/google/googletest/blob/master/googletest/README.md#standalone-cmake-project)
-* [Googletest Primer](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)
-* [Mejorar la calidad del código mediante la prueba unitaria](https://www.mql5.com/es/articles/1579).
-* [Google Test + gcover. Una lista de recetas](https://usingstdcpp.files.wordpress.com/2016/11/gtest.pdf)
-* [Exercism](https://exercism.io/)
-* [Exercism en genbeta](https://www.genbeta.com/desarrollo/exercism-fitness-para-nuestras-habilidades-programadoras)
-* [¿Qué es Ubuntu `snap`?](https://blogubuntu.com/que-es-ubuntu-snap) 
-* [snap quickstart guide](https://snapcraft.io/docs/getting-started)
-* [Números complejos](https://es.wikipedia.org/wiki/N%C3%BAmero_complejo)
-*	[Class code and header files](https://www.learncpp.com/cpp-tutorial/89-class-code-and-header-files/)
-* [Header guards](https://www.learncpp.com/cpp-tutorial/header-guards/)
 * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+* [Jutge](https://jutge.org/)
