@@ -8,7 +8,7 @@ Los objetivos de esta práctica son que el alumnado:
 * Profundice en el uso de funciones en sus programas.
 * Conozca los conceptos básicos del desarrollo de pruebas unitarias de código y escriba a mano pruebas unitarias para sus programas.
 * Comience a utilizar la plataforma Jutge para autoevaluar la corrección de sus programas.
-* Incluya de ahora en adelante comentarios de cabecera en todos sus ficheros de código.
+* Comience a escribir comentarios de cabecera en todos sus ficheros de código.
 
 ### Rúbrica de evaluacion de esta práctica
 En esta práctica y las siguientes ya no será admisible la presentación de un programa que, al margen de su funcionamiento,
