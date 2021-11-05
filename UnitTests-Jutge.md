@@ -61,6 +61,12 @@ Incluya siempre un bloque de comentarios similar al anterior en todos sus ficher
 Preste cuidado a la práctica habitual de "copiar y pegar" estos comentarios de un proyecto a otro, puesto que parte de la
 información cambiará.
 
+En proyectos de desarrollo de software de cierta entidad es común que este bloque de comentarios de cabecera de los ficheros
+incluya además la licencia de software bajo la que se publica el programa en cuestión.
+A título de ejemplo, 
+[consulte el texto](https://www.gnu.org/licenses/gpl-3.0.html)
+que se debiera incluir en los ficheros para publicarlos bajo licencia GPLv3.
+
 ### Pruebas Unitarias
 Las pruebas unitarias (unit tests en inglés), son pruebas que se utilizan para comprobar el correcto funcionamiento de
 componentes individuales de un programa.
